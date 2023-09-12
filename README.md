@@ -29,8 +29,7 @@ Ruby
 
 ### Tech Stack <a name="tech-stack"></a>
 
-
-    <a href="https://gorails.com/setup/windows/11">Ruby</a></li>
+<a href="https://gorails.com/setup/windows/11">Ruby</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
