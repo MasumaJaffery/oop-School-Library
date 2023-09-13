@@ -32,3 +32,5 @@ class Person
     of_age? || @parent_permission
   end
 end
+
+  # Did You that Person Class plays an role oof polymorphism, A Person can be student and also a teacher.
