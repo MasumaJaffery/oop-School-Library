@@ -9,6 +9,7 @@ class Person < Nameable
 
   # Initialize Method
   def initialize(age, name = 'unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..100)
     @name = name
     @age = age
@@ -40,11 +41,16 @@ class Person < Nameable
   end
 end
 
-  # Did You that Person Class plays an role oof polymorphism, A Person can be student and also a teacher.
+# Did You that Person Class plays an role oof polymorphism, A Person can be student and also a teacher.
 
+# Create a Person object
 person = Person.new(22, 'maximilianus')
-person.correct_name
+
+# Create a CapitalizeDecorator and wrap the person
 capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
+
+# Create a TrimmerDecorator and wrap the capitalized person
 capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+
+# Use the decorated object
 puts capitalized_trimmed_person.correct_name
