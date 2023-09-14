@@ -1,4 +1,6 @@
-class Person
+require_relative 'nameable'
+
+class Person < Nameable
   # Accessors Methods That used for getters and Setters in quick way!
   # attr_accessor works for getter and setter both purposes.
   attr_accessor :name, :age
@@ -7,11 +9,17 @@ class Person
 
   # Initialize Method
   def initialize(age, name = 'unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..100)
     @name = name
     @age = age
     @parent_permission = parent_permission
   end
+
+  def correct_name
+    @name
+  end
+
   # Private
 
   private
@@ -32,3 +40,17 @@ class Person
     of_age? || @parent_permission
   end
 end
+
+# Did You that Person Class plays an role oof polymorphism, A Person can be student and also a teacher.
+
+# Create a Person object
+person = Person.new(22, 'maximilianus')
+
+# Create a CapitalizeDecorator and wrap the person
+capitalized_person = CapitalizeDecorator.new(person)
+
+# Create a TrimmerDecorator and wrap the capitalized person
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+
+# Use the decorated object
+puts capitalized_trimmed_person.correct_name

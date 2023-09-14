@@ -120,6 +120,6 @@ Special Thanks to the Microverse and Microanuts.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](https://github.com/MasumaJaffery/oop-School-Library/blob/ruby-decorator/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
