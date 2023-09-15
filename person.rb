@@ -6,7 +6,7 @@ require_relative 'rental'
 class Person < Nameable
   # Accessors Methods That used for getters and Setters in a quick way!
   # attr_accessor works for getter and setter both purposes.
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :rentals
   # attr_reader works for only getter purposes.
   attr_reader :id, :classroom
 
