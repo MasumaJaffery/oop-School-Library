@@ -1,11 +1,14 @@
 require_relative 'nameable'
+require_relative 'classroom'
+require_relative 'book'
+require_relative 'rental'
 
 class Person < Nameable
   # Accessors Methods That used for getters and Setters in quick way!
   # attr_accessor works for getter and setter both purposes.
   attr_accessor :name, :age
   # attr_reader works for only getter purposr.
-  attr_reader :id
+  attr_reader :id, :classroom
 
   # Initialize Method
   def initialize(age, name = 'unknown', parent_permission: true)
@@ -14,12 +17,22 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rental = []
   end
 
   def correct_name
     @name
   end
 
+  def classroom(classroom)
+    @classroom = classroom
+    classroom.add_student(self)
+  end
+
+  def add_new_rental(book, date)
+    @rental << Rental.new(date, book, self)
+  end
+  
   # Private
 
   private
