@@ -11,7 +11,7 @@ class Person < Nameable
   attr_reader :id, :classroom
 
   # Initialize Method
-  def initialize(age, name = 'unknown', parent_permission: true)
+  def initialize(classroom,age, name = 'unknown', parent_permission: true)
     super()
     @id = Random.rand(1..100)
     @name = name
