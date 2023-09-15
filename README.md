@@ -78,15 +78,15 @@ Run the following command inside the project folder:
 
 ### Key Features <a name="key-features"></a>
 
-- **[Backend Management]**
-- **[Adaptability]**
-- **[Performance]**
-- 
+- Backend Management
+- Adaptability
+- Performance
+  
 ### Future Features <a name="future-features"></a>
 
-- **[Basic UI]**
-- **[Effiecency]**
-- **[More Features]**
+- Basic UI
+- Efficiency
+- More Features
 
 
 <!-- AUTHORS -->
