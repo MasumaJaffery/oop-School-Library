@@ -1,7 +1,8 @@
 require_relative 'book'
 
 class Rental
-   attr_accessor :date, :book, :person
+  attr_accessor :date, :book, :person
+
   def initialize(date, book, person)
     @date = date
     @book = book
@@ -9,5 +10,5 @@ class Rental
     # << is to append elements to an array.
     book.Rental << self
     person.Rental << self
-  end 
+  end
 end
