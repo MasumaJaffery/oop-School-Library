@@ -76,6 +76,19 @@ Run the following command inside the project folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Key Features <a name="key-features"></a>
+
+- Backend Management
+- Adaptability
+- Performance
+  
+### Future Features <a name="future-features"></a>
+
+- Basic UI
+- Efficiency
+- More Features
+
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
