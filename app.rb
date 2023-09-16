@@ -28,6 +28,7 @@ class App
   private
 
   def main_menu
+    puts('Welcome to School Library!')
     puts('Make a Selection for what you need:')
     puts('Choose an option below:')
     puts('1. List all Books')
