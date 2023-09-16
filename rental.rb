@@ -1,5 +1,3 @@
-require_relative 'book'
-
 class Rental
   attr_accessor :date, :book, :person
 
@@ -7,8 +5,12 @@ class Rental
     @date = date
     @book = book
     @person = person
-    # << is to append elements to an array.
-    book.Rental << self
-    person.Rental << self
+    add_rental # This method associates the rental with the book and person.
+  end
+
+  # Define a method to add the rental to the book and person.
+  def add_rental
+    book.add_rental(self)
+    person.add_rental(self)
   end
 end

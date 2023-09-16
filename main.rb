@@ -1,6 +1,6 @@
 require_relative 'app'
 def main
-  print('Welcome to School Library App!')
+  puts("Welcome to School Library!")
   app = App.new
   app.run
 end

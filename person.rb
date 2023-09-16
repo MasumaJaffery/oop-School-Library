@@ -29,8 +29,8 @@ class Person < Nameable
     classroom.add_student(self)
   end
 
-  def add_new_rental(book, date)
-    @rental << Rental.new(date, book, self)
+  def add_rental(rental)
+    @rental << rental
   end
 
   # Private

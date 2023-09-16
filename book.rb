@@ -9,7 +9,8 @@ class Book
     @rental = []
   end
 
-  def add_new_rental(person, date)
-    Rental.new(self, person, date)
+  # Define a method to add a rental to a book.
+  def add_rental(rental)
+    @rental << rental
   end
 end
