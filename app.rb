@@ -4,12 +4,29 @@ require_relative 'classroom'
 require_relative 'teacher'
 require_relative 'book'
 require_relative 'rental'
+# Here i already require_relative data_manager
+require_relative 'data/data_manager'
 
 class App
   def initialize
     @people = []
     @books = []
     @rentals = []
+    # Define Data Manager Here too!
+    @data_manager = DataManager.new
+    # load Data used here as Callback func!
+    load_data
+  end
+   # Load Data
+  def load_data
+    @data_manager.load_data
+    @books = @data_manager.books
+  end
+
+  # Save Data
+  def save_data
+    @data_manager.save_books
+    puts 'Book Save Successfully!'
   end
 
   def run
@@ -137,6 +154,8 @@ class App
     book = Book.new(name, author)
     @books.push(book)
     puts("Book created successfully: #{name} - #{author}")
+    # Call save_data here!
+    save_data
     sleep 3
     run
   end
